@@ -1,0 +1,164 @@
+/*___________________*/
+/* Basic setup*/
+/* #e67e22*/
+/*___________________*/
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+/*----------REUSABLE--------*/
+
+th, td {
+    padding: 1% 2% 1% 2%;
+    width: 8em;
+    border-bottom: 1px solid gray;
+}
+
+.text-field {
+    display: inline-block;
+    margin-left: 0.2%;
+}
+
+
+.divide-line {
+    border: 1px solid #e67e22;
+    background-color: #e67e22;
+    margin-top: 0%;
+    width: 60%;  
+}
+
+.btn:link,
+.btn:visited,
+.submit {
+    display: inline-block;
+    padding: 2% 4%;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    margin-left: 1%;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+.submit {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: blanchedalmond;
+}
+.editBtnStyle {
+    width: 50%;
+}
+.warning {
+    margin-top: 1%;
+    color: red;
+}
+
+
+/*___________________*/
+/* Top Part*/
+/*___________________*/
+
+.avatar{
+    width: 160px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 70%;
+    display: inline-block;
+}
+.avatar img {
+   width: 155px;
+    height: 165px;
+    transform: scale(2.5);
+    display: inherit;
+}
+.avatar img:hover{
+    background-color:#000;
+    -webkit-filter: brightness(80%);
+}
+
+.name-position {
+    display: inline-block;
+    margin-left: 2%;
+    transform: translate(0px,-55px);
+    font-size: 22px;
+    /*-padding-top: 10%;*/
+}
+.name {
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+
+.position {
+    margin-top: 1%;
+    opacity: 0.6;
+}
+.labelCheckBox {
+    display: inline-block;
+}
+
+/*___________________*/
+/* Personal Information*/
+/*___________________*/
+.personal-info{
+    list-style: none;
+}
+.demographics {
+    list-style: none;
+}
+
+.age #years {
+    display: inline-block;
+    opacity: 0.5;
+    margin-left: 0.2%;
+}
+.section-card {
+    width: 38%;
+}
+/*___________________*/
+/*Employment History*/
+/*___________________*/
+
+.employment-history {
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.employmentHistory {
+    border: none;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.editTable {
+    border: none;
+    font-weight: normal;
+}
+
+.tableButton {
+    display: none;
+}
+
+narrowColumn {
+    padding: 1px 1px 1px 1px;
+}

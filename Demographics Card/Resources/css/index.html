@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../../Vendors/css/Grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../Vendors/css/normalize.css">
+    <title>Employee Card</title>
+    </head>
+
+<body>
+    <div class="top-part">
+        <div class="avatar">
+            <img src="../img/avatar.jpg" alt="Employee Photo">
+        </div>
+        <div class="name-position">
+            <p class="name">Elena Tseller</p>
+            <p class="position">QA Engineer at Akvelon</p>
+        </div>
+    </div>
+
+    <div class="divide-line"></div>
+
+    <section class="section-card">
+        <div class="row">
+            <h2>Demographics</h2>
+        </div>
+        <div class="row">
+            <form method="post" action="#" class="demographicsForm" name="demographicsForm" id="demographicsForm">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="sex">Sex</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="sex" id="sex">
+                            <option value="none"> </option>
+                            <option value="female" selected>Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="dob">Date of Birth</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input class="text-field dob" type="date" name="dob" id="dob" placeholder="Date" onchange="birthday()" required>
+                        <div class="warning" type="text" id="warning">Date of Birth cannot be in the future</div>
+                    </div>
+                </div>
+
+               <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="company" id="compLabel">Company</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input class="text-field" type="text" name="company" id="company" placeholder="Company" required>
+                        <input type="checkbox" name="unemployed" id="unemployed" class="unemployed" onclick="disableIfUnemployed()">
+                        <label class="labelCheckBox" onclick="disableIfUnemployed()" for="unemployed">None</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="positionCard" id="positionLabel">Position</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input class="text-field" type="text" name="positionCard" id="positionCard" placeholder="Position" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="startDate" id="startDateLabel">Start Date</label>
+                    </div>
+
+                    <div class="col span-2-of-3">
+                        <input class="text-field" type="date" name="startdate" id="startDate" placeholder="Sart Date" onclick = "getDate()" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="endDate" id="endDateLabel">End Date</label>
+                    </div>
+
+                    <div class="col span-2-of-3">
+                        <input class="text-field" type="date" name="enddate" id="endDate" placeholder="End Date" required>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>Comment</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="message" placeholder="Your Comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <a class="btn btn-ghost" for="demographicsForm" href="#" onClick="clearEntry()">Cancel</a>
+                        <a class="btn submit" id="submit" href="#" onclick="addRow()" onClick="clearEntry()">Submit</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <div class="employment-history">
+         
+        <table id="history" method="post" onsubmit="addRow()" class="employmentHistory">
+            <tr>
+                <th for='company' id='compTable'>Company</th>
+                <th for='position' id='posTable'>Position</th>
+                <th for='startDate'>Start Date</th>
+                <th for='endDate'>End Date</th>
+            </tr>
+
+
+        </table>
+    </div>
+    <script src="../js/logic.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+</body>
+
+</html>
